@@ -72,7 +72,7 @@ def job():
 
 async def on_startup(dp):
     # Запускаем расписание
-    schedule.every(10).seconds.do(job)
+    schedule.every(1).hours.do(job)
 
     # Устанавливаем вебхук, чтобы использовать Long Polling
     await bot.delete_webhook()
